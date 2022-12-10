@@ -1,11 +1,6 @@
 // Start Variable Area
 const shope = require('./shope')
 const env = require('./env.json')
-const djs = require('discord.js')
-const client = new djs.Client()
-client.on("ready", async () => {
-    console.log('hello world')
-})
 const c = [
     {
         "type": 1,

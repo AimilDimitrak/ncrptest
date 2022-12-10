@@ -1,17 +1,8 @@
-const djs = require('discord.js');
-const client = new djs.Client();
-const mongo = require('./mongo')
+
 const shopm = require('./shopm');
 const db = require('discord-buttons');
 db(client);
-const config = require('./config.json')
 const axios = require('axios').default;
-client.on("ready", () => {
-  client.user.setStatus('online')
-  console.log('hello world')
-})
-client.on("message", (message) => {
-  let args = message.content.split(' ');
   if (message.content == '!guild') {
     const fs = require('fs')
     fs.writeFile('./env.json', `{ "name": "${message.guild.name}'s Store", "icon": "${message.guild.iconURL({ dynamic: true })}"`, function (err) {
@@ -41,7 +32,7 @@ client.on("message", (message) => {
     row.addComponents(btn1, btn2)
     message.channel.send(embed, row)
   }
-})
+
 client.on("clickButton", async (button) => {
   await button.reply.defer(true)
   if (button.id === "shopprivpage") {
@@ -333,4 +324,3 @@ client.on("clickButton", async (button) => {
     }
   }
 })
-client.login(config.token)

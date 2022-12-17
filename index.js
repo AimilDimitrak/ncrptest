@@ -293,4 +293,3 @@ client.on('message', (message) => {
     mongodb()
   }
 })
-client.login('OTk1Nzg0NzcxMTM5NTUxMjQz.GhtxEj.oQ-wFqq52vbvioa6m4VkH9AnNXqC5RKF0VRWfM')

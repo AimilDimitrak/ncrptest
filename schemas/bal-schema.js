@@ -3,7 +3,7 @@ const reqInt = {
     required: true,
     type: Number,
 }
-const balSchema = mongoose.schema({
+const balSchema = mongoose.Schema({
     did: reqInt,
     amount: reqInt,
     bamount: reqInt,
